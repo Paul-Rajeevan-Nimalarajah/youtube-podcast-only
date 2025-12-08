@@ -1,3 +1,7 @@
+if (window.location.pathname !== "/") {
+  // Not Home feed, do nothing
+  return;
+}
 // -----------------------------
 // YouTube Podcast-only content script (robust + debounced observer)
 // -----------------------------
