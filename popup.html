@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      width: 180px;
+      padding: 10px;
+      margin: 0;
+      border-radius: 12px; /* Rounded corners for popup */
+      box-sizing: border-box;
+      background: #f9f9f9;
+    }
+
+    h3 {
+      margin: 5px 0 10px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    .pill-toggle {
+      width: 100%; /* Fill popup width */
+      height: 28px;
+      background: red; /* Default OFF color */
+      border-radius: 14px;
+      position: relative;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .pill-toggle.active {
+      background: #4caf50; /* Green when ON */
+    }
+
+    .pill-toggle .circle {
+      width: 24px;
+      height: 24px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: 0.3s;
+    }
+
+    .pill-toggle.active .circle {
+      left: calc(100% - 26px); /* Move circle to far right */
+    }
+
+    #statusText {
+      margin-top: 8px;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h3>Podcast Only</h3>
+  <div class="pill-toggle" id="toggleSwitch">
+    <div class="circle"></div>
+  </div>
+  <p id="statusText">Loading...</p>
+  <script src="popup.js"></script>
+</body>
+</html>
